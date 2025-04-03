@@ -16,24 +16,31 @@ const operator = input[0];
 const n1 = parseInt(input[1]);
 const n2 = parseInt(input[2]);
 
-if (operator !== "+" && operator !== "-" && operator !== "*" && operator !== "/") {
+if (
+  operator !== "+" &&
+  operator !== "-" &&
+  operator !== "*" &&
+  operator !== "/"
+) {
   console.log("잘못된 입력");
 } else if (operator === "/" && n2 === 0) {
   console.log("0으로 나눌 수 없습니다.");
 } else {
-  if (operator === "+") {
-    console.log(n1 + n2);
-  } else if (operator === "-") {
-    console.log(n1 - n2);
-  } else if (operator === "*") {
-    console.log(n1 * n2);
-  } else if (operator === "/") {
-    console.log(n1 / n2);
+  switch (operator) {
+    case "+":
+      console.log(n1 + n2);
+      break;
+    case "-":
+      console.log(n1 - n2);
+      break;
+    case "*":
+      console.log(n1 * n2);
+      break;
+    case "/":
+      console.log(n1 / n2);
+      break;
   }
 }
-
-
-
 /*
 1 ~ 7 사이의 숫자를 받아서 해당 요일을 출력하는 프로그램
 1은 월요일, 2는 화요일, ... 7은 일요일
@@ -42,25 +49,42 @@ if (operator !== "+" && operator !== "-" && operator !== "*" && operator !== "/"
 
 const day = parseInt(input[3]);
 
-if (day == 1){
+if (day == 1) {
   console.log("월요일");
-} else if (day == 2){
-   console.log('화요일');
-} else if (day == 3){
-   console.log('수요일');
-} else if (day == 4){
-  console.log('목요일');
-} else if (day == 5){
-   console.log('금요일');
-} else if (day == 6){
-  console.log('토요일');
-} else if (day == 7){
-   console.log('일요일');
+} else if (day == 2) {
+  console.log("화요일");
+} else if (day == 3) {
+  console.log("수요일");
+} else if (day == 4) {
+  console.log("목요일");
+} else if (day == 5) {
+  console.log("금요일");
+} else if (day == 6) {
+  console.log("토요일");
+} else if (day == 7) {
+  console.log("일요일");
 } else {
-  console.log('잘못된 입력');
+  console.log("잘못된 입력");
 }
 
-
+switch (day) {
+  case "1":
+    console.log("월요일");
+    break;
+  case "2":
+    console.log("화요일");
+    break;
+  case "3":
+    console.log("수요일");
+    break;
+  case "4":
+    console.log("목요일");
+    break;
+  case "5":
+    console.log("금요일");
+    break;
+  default:
+}
 /*
 1 ~ 12 사이의 월을 받아서 게절을 출력하는 프로그램
 봄: 3 ~ 5월, 여름: 6 ~ 8월, 가을: 9 ~ 11월, 겨울: 12 ~ 2월
@@ -70,15 +94,19 @@ if (day == 1){
 let month = 4;
 
 if (month === 4) {
-  console.log('봄');
-} else if (month === 5 || month === 6 || month === 7 || month === 8 || month === 9) {
-  console.log('여름');
+  console.log("봄");
+} else if (
+  month === 5 ||
+  month === 6 ||
+  month === 7 ||
+  month === 8 ||
+  month === 9
+) {
+  console.log("여름");
 } else if (month === 11) {
-  console.log('가을');
+  console.log("가을");
 } else if (month === 12 || month === 1 || month === 2 || month === 3) {
-  console.log('겨울');
+  console.log("겨울");
 } else {
-  console.log('잘못된 입력');
+  console.log("잘못된 입력");
 }
-
-

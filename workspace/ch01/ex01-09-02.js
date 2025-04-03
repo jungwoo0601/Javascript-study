@@ -5,17 +5,17 @@
 55
 */
 
-var a = 0;
+var sum = 0;
 
-a += 1;
-a += 2;
-a += 3;
-a += 4;
-a += 5;
-a += 6;
-a += 7;
-a += 8;
-a += 9;
-a += 10;
+sum += 1; // sum = sum + 1 = 0 + 1 = 1
+sum += 2; // sum = sum + 2 = 1 + 2 = 3
+sum += 3; // sum = sum + 3 = 3 + 3 = 6
+sum += 4; // sum = sum + 4 = 6 + 4 = 10
+sum += 5; // sum = sum + 5 = 10 + 5 = 15
+sum += 6; // sum = sum + 6 = 15 + 6 = 21
+sum += 7; // sum = sum + 7 = 21 + 7 = 28
+sum += 8; // sum = sum + 7 = 21 + 7 = 28
+sum += 9; // sum = sum + 7 = 21 + 7 = 28
+sum += 10; // sum = sum + 7 = 21 + 7 = 28
 
-console.log(a); 
+console.log(sum);
