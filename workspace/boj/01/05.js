@@ -25,3 +25,8 @@
 0.8
 */
 
+function main() {
+  const data = getData();
+  console.log(data.a / data.b);
+}
+main();
