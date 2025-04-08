@@ -35,16 +35,13 @@ A와 B가 같은 경우에는 '=='를 출력한다.
 ==
 */
 
-// 입력값 예시:
-// 10 20
-
 function main() {
   const data = getData();
   // data에서 값을 꺼내서 문제 해결하는 코드 작성
-  if (data.a > data.b) {
-    console.log(">");
-  } else if (data.a < data.b) {
+  if (data.a < data.b) {
     console.log("<");
+  } else if (data.a > data.b) {
+    console.log(">");
   } else {
     console.log("==");
   }
