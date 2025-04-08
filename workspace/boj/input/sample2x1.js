@@ -11,13 +11,12 @@ main();
  */
 function getData() {
   const fs = require("fs");
-  const fileData = fs.readFileSync(0).toString().trim().split(" ");
+  const fileData = fs.readFileSync(0).toString().trim().split("\n");
 
   const result = new Object();
 
   result.a = isNaN(fileData[0]) ? fileData[0] : parseInt(fileData[0]);
   result.b = isNaN(fileData[1]) ? fileData[1] : parseInt(fileData[1]);
-  result.c = isNaN(fileData[2]) ? fileData[2] : parseInt(fileData[2]);
 
   return result;
 }
