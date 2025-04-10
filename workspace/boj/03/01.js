@@ -27,3 +27,24 @@ N을 입력받은 뒤, 구구단 N단을 출력하는 프로그램을 작성하�
 2 * 9 = 18
 */
 
+function main() {
+  const data = getData();
+  // data에서 값을 꺼내서 문제 해결하는 코드 작성
+  const dan = data;
+
+  for (let i = 1; i <= 9; i++) {
+    console.log(`${dan} * ${i} = ${dan * i}`);
+  }
+}
+main();
+
+/**
+ * 표준 입력장치(콘솔)에서 한 줄로 입력된 한 건의 데이터를 읽어서 반환한다.
+ * @returns {string|number} 읽은 데이터(숫자일 경우 number로 형변환)
+ */
+function getData() {
+  const fs = require("fs");
+  const fileData = fs.readFileSync(0).toString().trim();
+  const result = isNaN(fileData) ? fileData : Number(fileData);
+  return result;
+}
