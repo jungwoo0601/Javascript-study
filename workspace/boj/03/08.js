@@ -29,3 +29,30 @@ Case #4: 9 + 8 = 17
 Case #5: 5 + 2 = 7
 */
 
+function main() {
+  const data = getData();
+  // console.log(data);
+
+  for (let i = 0; i < data.length; i++) {
+    console.log(
+      `Case #${i + 1}: ${data[i][0]} + ${data[i][1]} = ${
+        data[i][0] + data[i][1]
+      }`
+    );
+  }
+}
+main();
+
+function getData() {
+  const fs = require("fs");
+  const fileData = fs.readFileSync(0).toString();
+  const arr = fileData.trim().split("\n");
+  const result = [];
+  for (let row of arr) {
+    const rowArr = row.split(" ");
+    for (let k = 0; k < rowArr.length; k++)
+      rowArr[k] = isNaN(rowArr[k]) ? rowArr[k] : parseInt(rowArr[k]);
+    result.push(rowArr);
+  }
+  return result;
+}
