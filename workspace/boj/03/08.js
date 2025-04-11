@@ -31,14 +31,13 @@ Case #5: 5 + 2 = 7
 
 function main() {
   const data = getData();
-  // console.log(data);
+  // console.log(data); // [ [ 5 ], [ 1, 1 ], [ 2, 3 ], [ 3, 4 ], [ 9, 8 ], [ 5, 2 ] ]
 
-  for (let i = 0; i < data.length; i++) {
-    console.log(
-      `Case #${i + 1}: ${data[i][0]} + ${data[i][1]} = ${
-        data[i][0] + data[i][1]
-      }`
-    );
+  for (let i = 1; i < data.length; i++) {
+    const n1 = data[i][0];
+    const n2 = data[i][1];
+    const sum = n1 + n2;
+    console.log(`Case #${i}: ${n1} + ${n2} = ${sum}`);
   }
 }
 main();

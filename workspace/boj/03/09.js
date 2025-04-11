@@ -25,20 +25,33 @@
 
 function main() {
   const data = getData();
-  for (let i = 1; i <= data; i++) {
-    let stars = "";
-    for (let k = 1; k <= i; k++) {
-      stars += "*";
-    }
-    console.log("*".repeat(i));
+  // console.log(data);
+  // for (let i=1; i<=data; i++) {
+  //   let stars = '*'.repeat(i);
+  //   // let stars = '';
+  //   // for (let k=1; k<=i; k++) {
+  //   //   stars += '*';
+  //   // }
+  //   console.log(stars);
+  // }
+
+  // 박선영
+  let result = "";
+  for (let i = 0; i < data; i++) {
+    result += "*";
+    console.log(result);
+  }
+
+  // 박상희
+  let result2 = "";
+  for (let i = 0; i < data; i++) {
+    console.log((result2 += "*"));
   }
 }
 main();
 
 function getData() {
-  const fs = require("fs");
-  const fileData = fs.readFileSync(0).toString();
-  const arr = fileData.trim().split("\n");
+  const arr = require("fs").readFileSync(0).toString().trim().split("\n");
   const result = [];
   for (let row of arr) {
     const rowArr = row.split(" ");

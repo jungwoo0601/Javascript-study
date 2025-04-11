@@ -26,18 +26,19 @@
 
 function main() {
   const data = getData();
-  console.log(data);
+  // console.log(data);
+
+  // for(let i=1;i<=data;i++) console.log(' '.repeat(data-i)+'*'.repeat(i));
+
   for (let i = 1; i <= data; i++) {
-    let stars = " ".repeat(data - i) + "*".repeat(i);
-    console.log(stars);
+    const space = " ".repeat(data - i);
+    const star = "*".repeat(i);
+    console.log(space + star);
   }
 }
-main();
 
 function getData() {
-  const fs = require("fs");
-  const fileData = fs.readFileSync(0).toString();
-  const arr = fileData.trim().split("\n");
+  const arr = require("fs").readFileSync(0).toString().trim().split("\n");
   const result = [];
   for (let row of arr) {
     const rowArr = row.split(" ");
@@ -47,4 +48,5 @@ function getData() {
   }
   return result.length === 1 ? result[0] : result;
 }
-//
+
+main();

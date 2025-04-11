@@ -31,14 +31,10 @@ Case #5: 7
 
 function main() {
   const data = getData();
-  // console.log(data);
+  // console.log(data); // [ [ 5 ], [ 1, 1 ], [ 2, 3 ], [ 3, 4 ], [ 9, 8 ], [ 5, 2 ] ]
 
-  for (let i = 0; i < data.length; i++) {
-    console.log(
-      `Case #${i + 1}: ${data[i][0]} + ${data[i][1]} = ${
-        data[i][0] + data[i][1]
-      }`
-    );
+  for (let i = 1; i < data.length; i++) {
+    console.log(`Case #${i}: ${data[i][0] + data[i][1]}`);
   }
 }
 main();

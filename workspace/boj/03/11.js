@@ -30,16 +30,33 @@
 7
 */
 
+// 이훈진
+// for (let a of getData()) if (a[0] || a[1]) console.log(a[0] + a[1]);
+
 function main() {
   const data = getData();
-  console.log(data);
+  // console.log(data);
+
+  for (let i = 0; i < data.length - 1; i++) {
+    // if (data[i][0] === 0 && data[i][1] === 0) continue;
+    console.log(data[i][0] + data[i][1]);
+  }
+
+  // 구성연
+  // data에서 값을 꺼내서 문제 해결하는 코드 작성
+  for (let i = 0; i < data.length; i++) {
+    const a = data[i][0];
+    const b = data[i][1];
+    if (a === 0 && b === 0) {
+      break;
+    } else {
+      console.log(`${a + b}`);
+    }
+  }
 }
-main();
 
 function getData() {
-  const fs = require("fs");
-  const fileData = fs.readFileSync(0).toString();
-  const arr = fileData.trim().split("\n");
+  const arr = require("fs").readFileSync(0).toString().trim().split("\n");
   const result = [];
   for (let row of arr) {
     const rowArr = row.split(" ");
@@ -49,3 +66,5 @@ function getData() {
   }
   return result.length === 1 ? result[0] : result;
 }
+
+main();
