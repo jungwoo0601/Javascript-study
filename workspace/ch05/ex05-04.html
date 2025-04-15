@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>쇼핑목록</title>
+  </head>
+  <body>
+    <h1>이벤트 등록 방식</h1>
+    <div>
+      <button>눌러봐</button>
+    </div>
+
+    <script>
+      const btn = document.querySelector("button");
+      //이벤트 등록 방법 1 : elem.on<event> 속성에 이벤트 핸들러 추가
+      btn.onclick = function () {
+        console.log("");
+      };
+    </script>
+  </body>
+</html>
