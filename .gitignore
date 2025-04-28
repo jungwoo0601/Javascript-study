@@ -1,6 +1,11 @@
 .vscode
 .history
 PPT/~$*
+<<<<<<< HEAD
 tempCode**.js
 workspace/ch06/*.js
 
+=======
+tempCodeRunnerFile.*
+workspace-ins/ch06/*.js
+>>>>>>> ef21d8938cd62161c322467411e9c0d87681bd30
