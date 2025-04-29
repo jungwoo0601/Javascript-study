@@ -2,19 +2,19 @@
 // ex06-07.ts 복사
 
 (() => {
-  //인터페이스 생성성
+  // 인터페이스 생성
+  // type User = {
   interface User {
     name: string;
     age: number;
   }
 
   const u1: User = {
-    name: "하루",
+    name: "haru",
     age: 5,
   };
-
   const u2: User = {
-    name: "나무",
+    name: "namu",
     age: 8,
   };
 

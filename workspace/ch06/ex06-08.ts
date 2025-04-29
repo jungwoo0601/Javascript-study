@@ -12,7 +12,7 @@
   // 할일 조회시 사용
   type TodoInfo = TodoRegist & {
     id: number;
-    //title: string;
+    // title: string;
     // content: string;
     done: boolean;
   };
@@ -28,6 +28,6 @@
     done: false,
   };
 
-  console.log(todo1.title, todo2.content);
+  console.log(todo1.title, todo1.content);
   console.log(todo2.id, todo2.title, todo2.content, todo2.done);
 })();

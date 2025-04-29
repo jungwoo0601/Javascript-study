@@ -4,11 +4,10 @@
   let str: string = "hello";
   let age: number = 9;
   let done: boolean = true;
-  // done = 'false'; //컴파일에러
+  // done = 'false'; // 컴파일 에러
 
   let nullVal: null = null;
   let emptyVal: undefined;
-  let obj: object = { name: "TypeScript" };
 
   let todo: object = { title: "TypeScript 공부", done: false };
   let todoList: Array<string> = ["JavaScript", "TypeScript"]; // 문자열로 구성된 배열
@@ -18,12 +17,16 @@
   let items: [string, number] = ["타스핑", 10];
 
   let userName: any = "이일구";
-  userName = 219; // any 타입은 어떤 타입도 가능
+  userName = 219; // tsc가 타입 체크를 하지 않음
 
+  // unknown: 값을 저장할 때는 아무타입의 값이나 저장이 가능하지만 사용할 때 추가적인 타입 체크 코드를 요구
   let userName2: unknown = "TSping";
-  //userName2 = 540; 숫자인경우
+  userName2 = 540;
 
-  console.log(userName.toUpperCase());
+  // console.log(userName.toUpperCase());
 
-  console.log((<string>userName2).toUpperCase());
+  if (typeof userName2 === "string") {
+    // 타입 가드
+    console.log(userName2.toUpperCase());
+  }
 })();
