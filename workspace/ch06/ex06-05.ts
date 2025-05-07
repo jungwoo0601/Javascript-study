@@ -1,6 +1,6 @@
 // 유니언 타입(union type)
 
-(() => {
+(()=>{
   // 문자열을 받아서 콘솔에 출력하는 함수
   function logString(msg: string) {
     console.log(msg);
@@ -10,16 +10,16 @@
     console.log(msg);
   }
 
-  logString("hello");
+  logString('hello');
   logNumber(123);
 
   // 유니언 타입
   // | 연산자로 여러 타입을 지정
-  function log(msg: string | number | boolean) {
+  function log(msg: string | number | boolean){
     console.log(msg);
   }
 
-  log("hello");
+  log('hello');
   log(123);
   log(false);
 })();
